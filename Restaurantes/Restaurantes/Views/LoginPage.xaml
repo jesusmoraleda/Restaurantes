@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Restaurantes.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <!--<StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
+        </StackLayout>-->
+
+        <Grid>
+
+            <Image Source="fondo.jpg" Aspect="AspectFill"/>
+            <BoxView Color="#a0699d" Opacity="0.8"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+            </Grid>
+
+            <Image Grid.Row="0" Source="icon.jpg" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30"/>
+
+            <StackLayout Grid.Row="1" Padding="30,20">
+                <Entry Placeholder="Correo electronico" PlaceholderColor="Black"/>
+                <Entry Placeholder="Contraseña" PlaceholderColor="Black" IsPassword="True"/>
+                <Button Text="Iniciar sesion" BackgroundColor="Black" CornerRadius="20" TextColor="#e0699d" Command="{Binding LoginCommand}"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Recuperar contraseña"/>
+                    <Label Text="Registrarse" HorizontalOptions="EndAndExpand" FontAttributes="Bold"/>
+                </StackLayout>
+            </StackLayout>
+
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>
