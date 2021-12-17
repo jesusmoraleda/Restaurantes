@@ -1,4 +1,5 @@
-REATE TABLE CATEGORY (
+
+CREATE TABLE CATEGORY (
   id_category varchar(20),
   name varchar(500),
   description varchar(500),
@@ -94,9 +95,8 @@ CREATE TABLE ORDER_REST (
   PRIMARY KEY(id_recipe)
  );
 
-
-INSERT INTO INVOICE VALUES('1','15/12/2021','80','20','6');
-INSERT INTO INVOICE VALUES('2','15/12/2021','100','25','10');
+INSERT INTO CATEGORY VALUES('1','Primeros Platos','En esta categoria estan los platos que se sirven de primero');
+INSERT INTO CATEGORY VALUES('2','Segundos Platos','En esta categoria estan los platos que se sirven de segundo');
 
 INSERT INTO PLATE VALUES('1','1','macarrones con tomate','1','5','1','macarrones con salsa de tomate y tofu','1');
 INSERT INTO PLATE VALUES('2','1','ensalada de verano','5','7','1','ensalada con patata cocida, piminetos atun y cebolla','0');
@@ -118,6 +118,31 @@ INSERT INTO INGREDIENT VALUES('10','carne cocido','3','2','7','kg');
 INSERT INTO INGREDIENT VALUES('11','solomillo de cerdo','3','2','8','kg');
 INSERT INTO INGREDIENT VALUES('12','nata para cocinar','2000','1000','3000','ml');
 INSERT INTO INGREDIENT VALUES('13','salmonetes','4','2','10','kg');
+INSERT INTO INGREDIENT VALUES('14','harina','0,5','1','3','kg');
+
+INSERT INTO STOCK VALUES('1','tomate');
+INSERT INTO STOCK VALUES('2','macarrones');
+INSERT INTO STOCK VALUES('3','tofu');
+INSERT INTO STOCK VALUES('4','patata');
+INSERT INTO STOCK VALUES('5','piminetos');
+INSERT INTO STOCK VALUES('6','atun');
+INSERT INTO STOCK VALUES('7','cebolla');
+INSERT INTO STOCK VALUES('8','garbanzos');
+INSERT INTO STOCK VALUES('9','fideos');
+INSERT INTO STOCK VALUES('10','carne cocido');
+INSERT INTO STOCK VALUES('11','solomillo de cerdo');
+INSERT INTO STOCK VALUES('12','nata para cocinar');
+INSERT INTO STOCK VALUES('13','salmonetes');
+INSERT INTO STOCK VALUES('14','harina');
+
+INSERT INTO RECIPE VALUES('1','macarrones con tomate','hervimos la pasta cocinamos el tofu, y añadimos el tomate','2');
+INSERT INTO RECIPE VALUES('2','ensalada de verano','cocemos las patatas y añadimos los pimientos el atun y la cebolla','4');
+INSERT INTO RECIPE VALUES('3','cocido madrileño','intoducir los garbanzos con carne de cocido en olla expres y esperar 35 minutos','8');
+INSERT INTO RECIPE VALUES('4','hamburguesa vegetariana','hacer hamburguesa con tofu, y freirla en la sarten','3');
+INSERT INTO RECIPE VALUES('5','solomillo de cerdo','sellar la carne , y despues realizar la salsa','11');
+INSERT INTO RECIPE VALUES('6','salmonetes','rebozar los salmonetes y despues hacerlos con aceite','13');
+
+INSERT INTO ALERTA VALUES('14','La harina esta bajo mimimos de stock');
 
 INSERT INTO WAITER VALUES('1','Jesus Martin Moraleda');
 INSERT INTO WAITER VALUES('2','Jorge Arevalo Echevarria');
@@ -133,5 +158,15 @@ INSERT INTO TABLE_REST VALUES('7','10','0','0','1');
 INSERT INTO TABLE_REST VALUES('8','8','7','0','0');
 INSERT INTO TABLE_REST VALUES('9','2','0','1','0');
 INSERT INTO TABLE_REST VALUES('10','15','0','1','0');
+
+INSERT INTO ORDER_REST VALUES('1','2','1','15/12/2021','4','el solomillo lo querian sin salsa','5');
+INSERT INTO ORDER_REST VALUES('2','4','2','15/12/2021','3',null,'3');
+INSERT INTO ORDER_REST VALUES('3','6','3','15/12/2021','5','la hamburguesa la quieren al punto','4');
  
- 
+INSERT INTO INVOICE VALUES('1','15/12/2021','80','20','6');
+INSERT INTO INVOICE VALUES('2','15/12/2021','100','25','10');
+INSERT INTO INVOICE VALUES('3','15/12/2021','60','15','5,5');
+
+INSERT INTO ORDER_DETAIL VALUES('1','1','5','1','el solomillo lo querian sin salsa');
+INSERT INTO ORDER_DETAIL VALUES('2','2','3','1',null);
+INSERT INTO ORDER_DETAIL VALUES('3','3','4','1','la hamburguesa la quieren al punto');
